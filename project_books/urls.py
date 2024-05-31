@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from recipe.views import main_view, recipe_detail_view
+from django.shortcuts import render
+from books.views import base
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', main_view, name='main'),
     path('recipe/', recipe_detail_view, name='recipe'),
-    #path()
+    path('', base, name='base'),  # Змінено ім'я шляху кореня на 'base'
 ]
+
