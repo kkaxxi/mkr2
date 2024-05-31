@@ -23,7 +23,7 @@ from books.views import base
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', main_view, name='main'),
-    path('recipe/', recipe_detail_view, name='recipe'),
+    path('recipe/<int:recipe_id>/', recipe_detail_view, name='recipe_detail'),
     path('', base, name='base'),  # Змінено ім'я шляху кореня на 'base'
 ]
 
